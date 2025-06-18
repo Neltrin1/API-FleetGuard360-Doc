@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copia el .jar al contenedor
-COPY target/*.jar app.jar
+COPY target/admin-panel-0.0.1-SNAPSHOT.jar app.jar
 
 # Expón el puerto usado por Spring Boot
 EXPOSE 8080
