@@ -1,14 +1,14 @@
-# Usa una imagen base con Java 17
+# Usa Java 17
 FROM eclipse-temurin:17-jdk
 
-# Crea un directorio para la app
+# Crea el directorio de la app
 WORKDIR /app
 
-# Copia el .jar al contenedor
+# Copia el .jar generado
 COPY target/admin-panel-0.0.1-SNAPSHOT.jar app.jar
 
-# Expón el puerto usado por Spring Boot
+# Expón el puerto que usa Spring Boot
 EXPOSE 8080
 
-# Ejecuta el .jar
+# Ejecuta la app y permite inyectar variables de entorno
 ENTRYPOINT ["java", "-jar", "app.jar"]
